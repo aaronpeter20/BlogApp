@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use('/user', userRoutes); 
-app.use('/api', blogRoutes);
+app.use('/blog', blogRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on http://localhost:${process.env.PORT}`);

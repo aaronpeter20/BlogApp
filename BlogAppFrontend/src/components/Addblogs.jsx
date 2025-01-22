@@ -17,12 +17,12 @@ const AddBlogs = () => {
 
   function updateValue() {
     if(location.state!=null){
-      axiosInstance.put('http://localhost:3000/api/edit/'+location.state.val._id, blogData).then((res)=>{
+      axiosInstance.put('/api/blog/edit/'+location.state.val._id, blogData).then((res)=>{
         alert(res.data)
         navigate('/blogs')
       })
     }else{
-      axiosInstance.post('http://localhost:3000/api/add', blogData)
+      axiosInstance.post('/api/blog/add', blogData)
       .then((res) => {
         navigate('/blogs');
       })
